@@ -1,0 +1,24 @@
+title: Bulelani Kote
+description: Data Engineer. Analytics Engineer. Poet.
+url: "https://bulelani-kote.github.io"
+baseurl: ""
+
+collections:
+  poetry:
+    output: true
+    permalink: /poetry/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "poetry"
+    values:
+      layout: "poem"
+
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

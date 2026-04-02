@@ -1,0 +1,14 @@
+---
+layout: default
+title: Poetry
+permalink: /poetry/
+---
+<section style="padding-top:4rem;">
+  <p class="section-label">Words</p><div class="section-rule"></div><h2 class="section-title">Poetry</h2>
+  <div class="poetry-intro"><p>Data is how I make sense of the world. Poetry is how I make sense of myself. Written between deployments, during load shedding, and in the quiet moments in between.</p></div>
+  <ul class="poems-list">
+    {% for poem in site.poetry reversed %}
+    <li><a href="{{ poem.url | relative_url }}"><span class="poems-list__title">{{ poem.title }}</span><span class="poems-list__date">{{ poem.date | date: "%B %Y" }}</span></a></li>
+    {% endfor %}
+  </ul>
+</section>

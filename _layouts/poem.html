@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="poem-page">
+  <p class="poem-page__date">{{ page.date | date: "%B %d, %Y" }}</p>
+  <h1 class="poem-page__title">{{ page.title }}</h1>
+  {% if page.dedication %}<p class="poem-page__dedication">{{ page.dedication }}</p>{% endif %}
+  <div class="poem-page__body">
+    {{ content }}
+  </div>
+  <a href="{{ '/poetry/' | relative_url }}" class="poem-page__back">&larr; All poems</a>
+</article>

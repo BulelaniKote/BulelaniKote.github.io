@@ -1,0 +1,37 @@
+---
+layout: default
+title: Home
+---
+<section class="hero">
+  <p class="hero__greeting">Data Engineer / Analytics Engineer / Poet</p>
+  <h1 class="hero__name">Bulelani Kote<em>I build data systems and make them make sense to people.</em></h1>
+  <p class="hero__intro">3+ years across the full data stack. From database architecture and ETL pipelines to BI dashboards used by senior leadership. Former maths teacher. At my best where data meets conversation.</p>
+  <div class="hero__tags">
+    <span class="hero__tag">PostgreSQL</span><span class="hero__tag">MongoDB</span><span class="hero__tag">Python</span><span class="hero__tag">Power BI</span><span class="hero__tag">C# / .NET</span><span class="hero__tag">ETL / ELT</span><span class="hero__tag">dbt</span><span class="hero__tag">SQL</span><span class="hero__tag">AWS</span>
+  </div>
+</section>
+<section>
+  <p class="section-label">Selected work</p><div class="section-rule"></div>
+  <div class="projects-grid">
+    <div class="card"><p class="card__number">01</p><h3 class="card__title">Production Database System</h3><p class="card__desc">Sole architect for a greenfield client database at Condorgreen. Relational and document-store schemas in PostgreSQL and MongoDB, with C# application integrations.</p><div class="card__tags"><span class="card__tag">PostgreSQL</span><span class="card__tag">MongoDB</span><span class="card__tag">C#</span><span class="card__tag">UML</span></div></div>
+    <div class="card"><p class="card__number">02</p><h3 class="card__title">BI Reporting Platform</h3><p class="card__desc">Integrated BI platform at Brands4Africa spanning multiple data sources. Power BI dashboards replaced fragmented manual reporting for senior leadership.</p><div class="card__tags"><span class="card__tag">Power BI</span><span class="card__tag">ETL</span><span class="card__tag">DAX</span><span class="card__tag">SQL</span></div></div>
+    <div class="card"><p class="card__number">03</p><h3 class="card__title">Data Warehouse Pipelines</h3><p class="card__desc">ETL pipelines at Qubitron ingesting from multiple heterogeneous source systems into a structured data warehouse for analytics and reporting.</p><div class="card__tags"><span class="card__tag">SSMS</span><span class="card__tag">T-SQL</span><span class="card__tag">ETL</span><span class="card__tag">Data Warehouse</span></div></div>
+  </div>
+</section>
+<section>
+  <p class="section-label">Toolkit</p><div class="section-rule"></div>
+  <div class="skills-grid">
+    <div class="skill-group"><p class="skill-group__label">Core</p><p class="skill-group__items">SQL, T-SQL, PostgreSQL, Python, C# / .NET, MongoDB</p></div>
+    <div class="skill-group"><p class="skill-group__label">Data Engineering</p><p class="skill-group__items">ETL / ELT Pipelines, Data Modelling, Database Architecture, Data Warehousing, UML / ERD</p></div>
+    <div class="skill-group"><p class="skill-group__label">BI & Analytics</p><p class="skill-group__items">Power BI / DAX, Tableau, Looker, R</p></div>
+    <div class="skill-group"><p class="skill-group__label">Platforms</p><p class="skill-group__items">SSMS, Azure, GCP / BigQuery, dbt, Git, AWS, Microsoft Fabric</p></div>
+  </div>
+</section>
+<section>
+  <p class="section-label">Words</p><div class="section-rule"></div>
+  <ul class="poems-list">
+    {% for poem in site.poetry reversed limit:3 %}
+    <li><a href="{{ poem.url | relative_url }}"><span class="poems-list__title">{{ poem.title }}</span><span class="poems-list__date">{{ poem.date | date: "%b %Y" }}</span></a></li>
+    {% endfor %}
+  </ul>
+</section>
